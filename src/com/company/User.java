@@ -17,5 +17,4 @@ public class User {
 
     private ArrayList<Account> accounts; // The list of accounts for this user.
 
-
 }
