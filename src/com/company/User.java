@@ -54,4 +54,12 @@ public class User {
 
     }
 
+    /**
+     * Add an account for the user
+     * @param anAcct the account to add
+     */
+    public void addAccount(Account anAcct) {
+        this.account.add(anAcct);               // using encapsulation
+    }
+
 }

@@ -17,4 +17,16 @@ public class Bank {
 
     }
 
+    public String getNewAccountUUID() {
+
+    }
+
+    /**
+     * Add an account
+     * @param anAcct the account to add
+     */
+    public void addAccount(Account anAcct) {
+        this.accounts.add(anAcct);
+    }
+
 }
