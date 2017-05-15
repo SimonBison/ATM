@@ -34,8 +34,10 @@ public class User {
      */
     private ArrayList<Account> accounts;
 
-    /** Header comment for the constructor.
+    /**
+     * Header comment for the constructor.
      * Create a new user
+     *
      * @param firstName the user's first name
      * @param lastName  the user's last name
      * @param pin       the user's account pin number
@@ -64,8 +66,8 @@ public class User {
         // create empty list of accounts (constructor for the array list)
         this.accounts = new ArrayList<Account>();
 
-        // print out a log message (to know what the uuid is
-        System.out.printf("New user %s, %s with ID %s created. \n", lastName, firstName);
+        // print out a log message (to know what the uuid is)
+        System.out.printf("New user %s, %s with ID %s created. \n", lastName, firstName, this.uuid);
 
     }
 
@@ -77,4 +79,11 @@ public class User {
         this.account.add(anAcct);               // using encapsulation
     }
 
+    /**
+     * Return the user's UUID
+     * @return the uuid
+     */
+    public String getUUID() {
+        return this.uuid;
+    }
 }
