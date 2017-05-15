@@ -7,13 +7,24 @@ import java.util.Date;
  */
 public class Transaction {
 
-    private double amount; // The amount of this transaction.
+    /**
+     * The amount of this transaction.
+     */
+    private double amount;
 
-    private Date timestamp; // The time and date of this transaction.
+    /**
+     * The time and date of this transaction.
+     */
+    private Date timestamp;
 
-    private String memo; // A memo for this transaction.
+    /**
+     * A memo for this transaction.
+     */
+    private String memo;
 
-    private Account inAccount;   // link back to what account the transaction took place.
-
+    /**
+     * The account in which the transaction was performed (link back to what account the transaction took place).
+     */
+    private Account inAccount;
 
 }
