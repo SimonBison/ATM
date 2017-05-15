@@ -7,13 +7,25 @@ import java.util.ArrayList;
  */
 public class Account {
 
-    private String name; // The name of the account.
+    /**
+     * The name of the account.
+     */
+    private String name;
 
-    private String uuid; // The account ID number is different from the user id.
+    /**
+     * The account ID number (different from the user id).
+     */
+    private String uuid;
 
-    private User holder; // Some User that holds this account.
+    /**
+     * The User object that owns thos account (Some User that holds this account).
+     */
+    private User holder;
 
-    private ArrayList<Transaction> transactions; // A list of transactions for this account.
+    /**
+     * A list of transactions for this account.
+     */
+    private ArrayList<Transaction> transactions;
 
     /**
      * Create a new Account

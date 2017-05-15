@@ -28,7 +28,7 @@ public class User {
      * The MD5 hash of the user's pin number.(storing user pin information)
      */
     private byte pinHash[];
-    
+
     /**
      * The list of accounts for this user.
      */
