@@ -9,15 +9,30 @@ import java.util.ArrayList;
  */
 public class User {
 
-    private String firstName; // The first name of the user.
+    /**
+     * The first name of the user.
+     */
+    private String firstName;
 
-    private String lastName; // The last name of the user.
+    /**
+     * The last name of the user.
+     */
+    private String lastName;
 
-    private String uuid; // unique universal identifier - it is a id code(number) for the user.
+    /**
+     * The ID number of the user. - Unique universal identifier - it is a id code(number) for the user.
+     */
+    private String uuid;
 
-    private byte pinHash[]; // storing user pin information.
-
-    private ArrayList<Account> accounts; // The list of accounts for this user.
+    /**
+     * The MD5 hash of the user's pin number.(storing user pin information)
+     */
+    private byte pinHash[];
+    
+    /**
+     * The list of accounts for this user.
+     */
+    private ArrayList<Account> accounts;
 
     /** Header comment for the constructor.
      * Create a new user
