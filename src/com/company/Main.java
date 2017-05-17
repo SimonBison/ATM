@@ -64,4 +64,31 @@ public class Main {
 
         return authUser;
     }
+
+    public static void printUserMenu(User theUser, Scanner sc) {
+
+        // print a summary of the user's accounts
+        theUser.printAccountsSummary();
+
+        // init
+        int choice;
+
+        // user menu
+        do {
+            System.out.println("Welcome %s, what would you like to do?",
+                    theUser.getFirstName());
+            System.out.println(" 1) Show account transaction history");
+            System.out.println(" 2) Withdrawal");
+            System.out.println(" 3) Deposit");
+            System.out.println(" 4) Transfer");
+            System.out.println(" 5) Quit");
+            System.out.println();
+            System.out.println("Enter choice: ");
+            choice = sc.nextInt();
+
+            if (choice < 1 || choice > 5) {
+                System.out.println("Invalid input. Please choose a number 1-5");
+            }
+        } while(choice < 1 || choice > 5);
+    }
 }

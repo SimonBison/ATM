@@ -106,4 +106,12 @@ public class User {
 
         return false;
     }
+
+    /**
+     * Retrun the user's first name.
+     * @return  the first name
+     */
+    public String getFirstName(){
+        return this.firstName;
+    }
 }
