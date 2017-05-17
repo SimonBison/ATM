@@ -76,7 +76,7 @@ public class User {
      * @param anAcct the account to add
      */
     public void addAccount(Account anAcct) {
-        this.account.add(anAcct);               // using encapsulation
+        this.Account.add(anAcct);               // using encapsulation
     }
 
     /**
@@ -85,5 +85,25 @@ public class User {
      */
     public String getUUID() {
         return this.uuid;
+    }
+
+    /**
+     * Check whether a given pin matches the true User pin
+     * @param aPin  the pin to check
+     * @return      whether the pin is valid or not
+     */
+    public boolean validatePin(String aPin){
+
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            return MessageDigest.isEqual(md.digest(aPin.getBytes()),
+                    this.pinHash);
+        } catch (NoSuchAlgorithmException e) {
+            System.err.println("error, caught NoSuchAlgorithmException");
+            e.printStackTrace();
+            System.exit(1);
+        }
+
+        return false;
     }
 }
